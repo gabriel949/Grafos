@@ -67,6 +67,7 @@ namespace grafo
 
                 }
                 Console.WriteLine();
+                Console.WriteLine();
             }
 
             Console.ReadKey();
@@ -144,6 +145,7 @@ namespace grafo
                     Console.ForegroundColor = ConsoleColor.White;
 
                 }
+                Console.WriteLine();
                 Console.WriteLine();
             }
             Console.ReadLine();
