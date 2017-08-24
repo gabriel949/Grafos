@@ -21,13 +21,17 @@ namespace grafo
             int opcao = 0;
 
 
-            while (opcao != 4)
+            while (opcao != 8)
             {
                 Console.Clear();
                 Console.WriteLine("1 - Criar arestas.");
                 Console.WriteLine("2 - Remover aresta.");
                 Console.WriteLine("3 - Mostrar Grafo.");
-                Console.WriteLine("4 - Sair.");
+                Console.WriteLine("4 - Grafo Completo.");
+                Console.WriteLine("5 - Totalmente desconexo.");
+                Console.WriteLine("6 - Gerar grafo completo");
+                Console.WriteLine("7 - Euleriano.");
+                Console.WriteLine("8 - Sair");
                 Console.Write("Escolha uma opção : ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -65,6 +69,58 @@ namespace grafo
                     case 3:
                         Console.Clear();
                         matriz.mostrar(vertice);
+                        break;
+
+                    case 4:
+                        Console.Clear();
+
+                        if (matriz.Completo(vertice))
+                        {
+                            Console.WriteLine("O grafo é completo");
+                        }
+                        else
+                        {
+                            Console.WriteLine("O grafo não é completo");
+                        }
+
+                        Console.ReadLine();
+                        break;
+
+                    case 5:
+                        Console.Clear();
+
+                        if (matriz.desconexo(vertice))
+                        {
+                            Console.WriteLine("O grafo não é desconexo");
+                        }
+                        else
+                        {
+                            Console.WriteLine("O grafo é desconexo");
+                        }
+
+                        Console.ReadLine();
+                        break;
+
+                    case 6:
+                        Console.Clear();
+                        matriz.grafoCompleto(vertice);
+
+
+                        break;
+
+                    case 7:
+                        Console.Clear();
+
+                        if (matriz.desconexo(vertice))
+                        {
+                            Console.WriteLine("O grafo não é euleriano");
+                        }
+                        else
+                        {
+                            Console.WriteLine("O grafo é euleriano");
+                        }
+
+                        Console.ReadLine();
                         break;
 
 
